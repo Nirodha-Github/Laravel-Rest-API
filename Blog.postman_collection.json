@@ -1,0 +1,1128 @@
+{
+	"info": {
+		"_postman_id": "70e9a048-f7cf-467d-8233-6d2b5b48beef",
+		"name": "Blog",
+		"description": "Laravel REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23137878"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Get Single Post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/post/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/post/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"post",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 04:32:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 04:32:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"My First Post\",\n    \"body\": \"This is the body of my first post\",\n    \"status\": \"published\",\n    \"user_id\": 2,\n    \"created_at\": \"2024-09-25T15:11:39.000000Z\",\n    \"updated_at\": \"2024-09-25T15:11:39.000000Z\",\n    \"comments\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "My First Post",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "This is the body of my first post",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "published",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/post/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"new"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "My First Post",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "This is the body of my first post",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "published",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/post/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"post",
+										"new"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 04:31:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 04:31:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"My First Post\",\n    \"body\": \"This is the body of my first post\",\n    \"user_id\": 2,\n    \"updated_at\": \"2024-09-26T04:31:51.000000Z\",\n    \"created_at\": \"2024-09-26T04:31:51.000000Z\",\n    \"id\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "My Updated Post",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "This is the updated body",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "draft",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/post/4/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"4",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "My Updated Post",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "This is the updated body",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "draft",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/post/4/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"post",
+										"4",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 06:13:16 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 06:13:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"title\": \"My Updated Post\",\n    \"body\": \"This is the updated body\",\n    \"status\": \"draft\",\n    \"user_id\": 2,\n    \"created_at\": \"2024-09-26T04:31:48.000000Z\",\n    \"updated_at\": \"2024-09-26T06:13:16.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/post/4/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"4",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/post/4/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"post",
+										"4",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 08:25:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 08:25:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 04:32:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 04:32:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"published\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-25T15:11:39.000000Z\",\n            \"updated_at\": \"2024-09-25T15:11:39.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"published\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T03:35:58.000000Z\",\n            \"updated_at\": \"2024-09-26T03:35:58.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"published\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T04:25:34.000000Z\",\n            \"updated_at\": \"2024-09-26T04:25:34.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"draft\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T04:31:48.000000Z\",\n            \"updated_at\": \"2024-09-26T04:31:48.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"draft\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T04:31:51.000000Z\",\n            \"updated_at\": \"2024-09-26T04:31:51.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/posts?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/posts?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 5\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Add Comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "body",
+									"value": "This is a comment on the post",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/post/1/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Comments",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "body",
+											"value": "This is a comment on the post",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/post/1/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"post",
+										"1",
+										"comments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 08:27:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 08:27:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"body\": \"This is a comment on the post\",\n    \"user_id\": 2,\n    \"post_id\": 1,\n    \"updated_at\": \"2024-09-26T08:27:34.000000Z\",\n    \"created_at\": \"2024-09-26T08:27:34.000000Z\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/post/1/comments/1/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"1",
+								"comments",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Comments",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/post/1/comments/1/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"post",
+										"1",
+										"comments",
+										"1",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 12:07:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Sep 2024 12:07:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nirodha Lakmali",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nirodha41@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Nirodha123@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "nirodha41@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Nirodha123@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Sep 2024 12:21:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Sep 2024 12:21:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"published\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-25T15:11:39.000000Z\",\n            \"updated_at\": \"2024-09-25T15:11:39.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"published\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T03:35:58.000000Z\",\n            \"updated_at\": \"2024-09-26T03:35:58.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"published\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T04:25:34.000000Z\",\n            \"updated_at\": \"2024-09-26T04:25:34.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"draft\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T04:31:51.000000Z\",\n            \"updated_at\": \"2024-09-26T04:31:51.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            }\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/posts?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/posts?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 4,\n    \"total\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|tS9IqU2PPdQ9MACjYQ0X3u9fc4NL17wQYq9nhd70c5d47665",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/posts/search?title=post&status=draft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "post"
+						},
+						{
+							"key": "status",
+							"value": "draft"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Posts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/posts/search?title=post&status=draft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "post"
+								},
+								{
+									"key": "status",
+									"value": "draft"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Sep 2024 12:25:38 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 26 Sep 2024 12:25:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"My First Post\",\n            \"body\": \"This is the body of my first post\",\n            \"status\": \"draft\",\n            \"user_id\": 2,\n            \"created_at\": \"2024-09-26T04:31:51.000000Z\",\n            \"updated_at\": \"2024-09-26T04:31:51.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Nirodha Lakmali\",\n                \"email\": \"nirodha41@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"updated_at\": \"2024-09-25T14:11:19.000000Z\",\n                \"role\": \"user\"\n            },\n            \"comments\": []\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/posts/search?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/posts/search?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/posts/search?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/posts/search\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 1\n}"
+				}
+			]
+		}
+	]
+}
